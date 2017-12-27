@@ -25,7 +25,6 @@ function update_magic()
 		${OBJCOPY_CMD}  --remove-section  .mymagic $1
 	fi
 	${OBJCOPY_CMD}  --add-section .mymagic=${MAGIC_FILE} $1
-	${MAGIC_CMD}  $1
 }
 
 function check_app_magic()
