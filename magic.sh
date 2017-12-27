@@ -22,7 +22,7 @@ function update_magic()
 	tmp=$(${READELF_CMD} -s $1 | grep ".mymagic") && test -n tmp &&  EXETYPE=3
 	if [ ${EXETYPE} -eq 3 ]
 	then
-		${OBJCOPY_CMD}  --remove-section  .ecntmagic $1
+		${OBJCOPY_CMD}  --remove-section  .mymagic $1
 	fi
 	${OBJCOPY_CMD}  --add-section .mymagic=${MAGIC_FILE} $1
 	${MAGIC_CMD}  $1
