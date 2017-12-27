@@ -48,9 +48,9 @@ function check_mod_magic()
 	fi
 	if [ -d $1 ]
 	then
-		for file in $(ls $1)
+		for FILE in $(ls $1)
 		do
-			check_mod_magic $1/$file
+			check_mod_magic $1/${FILE}
 		done
 	fi
 }
