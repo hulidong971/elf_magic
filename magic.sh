@@ -31,7 +31,7 @@ function update_magic()
 function check_app_magic()
 {
 	DIR1=${PWD}/bin
-  DIR2=${PWD}/sbin
+ 	DIR2=${PWD}/sbin
 	for DIR in ${DIR1} ${DIR2}
 	do
 		for FILE in $(ls)
